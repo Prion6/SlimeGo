@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d75357fea90534f448f3a2a7e62d5957, type: 3}
+  m_Name: Question6
+  m_EditorClassIdentifier: 
+  text: "Si se te cae un huevo podrido en la habitaci\xF3n, \xBFqu\xE9 haces?"
+  answers:
+  - {fileID: 11400000, guid: 065c5889ea556c7419cceea1ef920e6d, type: 2}
+  - {fileID: 11400000, guid: 9ccbe800a3a8d754893e0628c14a2966, type: 2}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d75357fea90534f448f3a2a7e62d5957, type: 3}
+  m_Name: Question7
+  m_EditorClassIdentifier: 
+  text: "Un amigo te da algo que se te hab\xEDa olvidado. \xBFC\xF3mo se lo agradeces?"
+  answers:
+  - {fileID: 11400000, guid: 5cb41fe8703a2254b8b286ecf7a3641e, type: 2}
+  - {fileID: 11400000, guid: 658c3b6829fbdf1478a8008a43742e40, type: 2}
+  - {fileID: 11400000, guid: 8ce7b284312176f42a4ed0c1c30573b9, type: 2}

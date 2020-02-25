@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d75357fea90534f448f3a2a7e62d5957, type: 3}
+  m_Name: Question4
+  m_EditorClassIdentifier: 
+  text: "Imagina que tienes un cubo.Si tuvieras que llevar agua,\xBFc\xF3mo lo llenar\xEDas?"
+  answers:
+  - {fileID: 11400000, guid: b588037a21aa01b428a4fcf8fd8672b3, type: 2}
+  - {fileID: 11400000, guid: d53d7a2133e79c94ca8cf5636756905e, type: 2}
+  - {fileID: 11400000, guid: 34e7b3e9a60eef44c8d8721b9aad31e2, type: 2}

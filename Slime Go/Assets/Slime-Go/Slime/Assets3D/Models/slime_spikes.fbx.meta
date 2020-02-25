@@ -1,0 +1,180 @@
+fileFormatVersion: 2
+guid: 1e66e492c69ef02489ec38b0366879b1
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Cone
+    100002: Cone.011
+    100004: Cone.012
+    100006: Cone.013
+    100008: Cone.014
+    100010: Cone.015
+    100012: Cone.016
+    100014: Cone.017
+    100016: Cone.018
+    100018: Cone.019
+    100020: Cone.020
+    100022: Cone.021
+    100024: Cone.022
+    100026: Cone.023
+    100028: Cone.024
+    100030: Cone.025
+    100032: slime
+    100034: //RootNode
+    400000: Cone
+    400002: Cone.011
+    400004: Cone.012
+    400006: Cone.013
+    400008: Cone.014
+    400010: Cone.015
+    400012: Cone.016
+    400014: Cone.017
+    400016: Cone.018
+    400018: Cone.019
+    400020: Cone.020
+    400022: Cone.021
+    400024: Cone.022
+    400026: Cone.023
+    400028: Cone.024
+    400030: Cone.025
+    400032: slime
+    400034: //RootNode
+    2100000: slime_rock
+    2100002: No Name
+    2300000: Cone
+    2300002: Cone.011
+    2300004: Cone.012
+    2300006: Cone.013
+    2300008: Cone.014
+    2300010: Cone.015
+    2300012: Cone.016
+    2300014: Cone.017
+    2300016: Cone.018
+    2300018: Cone.019
+    2300020: Cone.020
+    2300022: Cone.021
+    2300024: Cone.022
+    2300026: Cone.023
+    2300028: Cone.024
+    2300030: Cone.025
+    2300032: slime
+    3300000: Cone
+    3300002: Cone.011
+    3300004: Cone.012
+    3300006: Cone.013
+    3300008: Cone.014
+    3300010: Cone.015
+    3300012: Cone.016
+    3300014: Cone.017
+    3300016: Cone.018
+    3300018: Cone.019
+    3300020: Cone.020
+    3300022: Cone.021
+    3300024: Cone.022
+    3300026: Cone.023
+    3300028: Cone.024
+    3300030: Cone.025
+    3300032: slime
+    4300000: slime
+    4300002: Cone
+    4300004: Cone.011
+    4300006: Cone.012
+    4300008: Cone.014
+    4300010: Cone.013
+    4300012: Cone.018
+    4300014: Cone.017
+    4300016: Cone.016
+    4300018: Cone.015
+    4300020: Cone.025
+    4300022: Cone.024
+    4300024: Cone.023
+    4300026: Cone.022
+    4300028: Cone.021
+    4300030: Cone.020
+    4300032: Cone.019
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
