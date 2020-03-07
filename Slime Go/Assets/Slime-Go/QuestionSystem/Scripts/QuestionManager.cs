@@ -41,10 +41,10 @@ namespace QuestionSystem
                 questions.Add(erasedQuestions[i]);
             }
             erasedQuestions = new List<Question>();
-            for (int i = 0; i < gameQuestions.Count; i++)
+            /*for (int i = 0; i < gameQuestions.Count; i++)
             {
                 Debug.Log(gameQuestions[i]);
-            }
+            }*/
             actualQuestion = gameQuestions[aux];
             questionText.text = actualQuestion.Text;
 
@@ -54,6 +54,7 @@ namespace QuestionSystem
                 newSolver.SetText(actualQuestion.GetAnswerText(i));
                 buttons.Add(newSolver);
                 var temp = i;
+                newSolver.AddListener(delegate { actualQuestion.AnswerAction(temp); });
                 newSolver.AddListener(delegate { SetNextQuestion(); });
             }
         }

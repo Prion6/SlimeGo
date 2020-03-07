@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d75357fea90534f448f3a2a7e62d5957, type: 3}
   m_Name: Question3
   m_EditorClassIdentifier: 
-  text: segunda
+  text: "\xBFTraicionarias a un amigo? "
   answers:
   - {fileID: 11400000, guid: 81065fbc20f4b5947938dd1095dd11bb, type: 2}
   - {fileID: 11400000, guid: e4c29550d112c754097504179cac71ef, type: 2}

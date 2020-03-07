@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4909700e8200f4cb516fcb633fbf07, type: 3}
   m_Name: Ans2Q6
   m_EditorClassIdentifier: 
-  text: 2
-  types: 06000000
+  text: Respirar hondo
+  types: 02000000

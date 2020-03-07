@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d75357fea90534f448f3a2a7e62d5957, type: 3}
   m_Name: Question9
   m_EditorClassIdentifier: 
-  text: segunda
+  text: "\xBFHas puesto una trampa a alguien alguna vez?"
   answers:
   - {fileID: 11400000, guid: baa57fdfe07a4774295532dd72bf98dc, type: 2}
   - {fileID: 11400000, guid: 5fd87b9b5b0873341ab60d552eedbae9, type: 2}

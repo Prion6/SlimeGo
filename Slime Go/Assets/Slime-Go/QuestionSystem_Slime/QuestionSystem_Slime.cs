@@ -27,20 +27,30 @@ namespace QuestionSystem.Slime
                     types.Add(answers[i].Types[j]);
                 }
             }
-            Debug.Log(answers.Count);
+
+            /*for (int j = 0; j < types.Count; j++)
+            {
+                Debug.Log(types[j]);
+            }*/
+
             for (int i = 0; i < System.Enum.GetValues(typeof(SlimeType)).Length; i++)
             {
+                //type = (SlimeType)i;
                 for (int j = 0; j < types.Count; j++)
                 {
-                    lastValue++;
+                    // Debug.Log("son iguales " + ((SlimeType)i == (SlimeType)j));
+                    Debug.Log("son iguales  " + (SlimeType)i + " == " + types[j]);
+                    if ((SlimeType)i == types[j]) lastValue++;
                     if (lastValue > actualValue)
                     {
                         actualValue = lastValue;
-                        type = (SlimeType)j;
+                        Debug.Log((SlimeType)i);
+                        type = (SlimeType)i;
                         Slime.GetComponent<Image>().sprite = sprites[(int)type];
                     }
                 }
                 lastValue = 0;
+                //Debug.Log("type" + type);
             }
             Slime.SetActive(true);
             Debug.Log(type.ToString());

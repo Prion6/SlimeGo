@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4909700e8200f4cb516fcb633fbf07, type: 3}
   m_Name: Q12Ans1
   m_EditorClassIdentifier: 
-  text: "Me enfrento a \xE9"
+  text: "Me enfrento a \xE9l"
   types: 04000000

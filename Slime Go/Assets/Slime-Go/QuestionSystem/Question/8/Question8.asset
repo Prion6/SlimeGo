@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d75357fea90534f448f3a2a7e62d5957, type: 3}
   m_Name: Question8
   m_EditorClassIdentifier: 
-  text: "\xBFHas puesto una trampa a alguien alguna vez?"
-  answers: []
+  text: Vas por la calle y ves una cartera en el sueloVas por la calle y ves una cartera
+    en el suelo.
+  answers:
+  - {fileID: 11400000, guid: 8bff0675a7020bb499ab8b231f4e0f45, type: 2}
+  - {fileID: 11400000, guid: 2c60b7d3c1743f349bbd6f1341fa52a1, type: 2}
+  - {fileID: 11400000, guid: 655396e188ce9124a80d2277cda49538, type: 2}
