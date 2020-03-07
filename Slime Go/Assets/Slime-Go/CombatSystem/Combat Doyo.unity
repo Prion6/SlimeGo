@@ -313,34 +313,34 @@ MonoBehaviour:
   enemy: {fileID: 1142791348}
   waitTime: 1
   skins:
-  - model: {fileID: 8010125135160857214, guid: 396493909d7ea6642992ec6930573edd, type: 3}
+  - model: {fileID: 8010125135160857214, guid: 72598a17b8fccc74f9797557d2ed6616, type: 3}
     proyectile: {fileID: 114638756151039660, guid: f15a9bc7cf844c84685b666c6e752abc,
       type: 3}
-  - model: {fileID: 8010125135160857214, guid: 2a4220c390ccef4449cbc807d3dd575a, type: 3}
+  - model: {fileID: 8010125135160857214, guid: af3587753c7840e419a14a143ba34ec9, type: 3}
     proyectile: {fileID: 114459056251413154, guid: 6ff33c2f34e65274cb8dc53c03278b24,
       type: 3}
-  - model: {fileID: 2560710919209511419, guid: 43313bbbc88ba0c4f8cb2a4aa864a306, type: 3}
+  - model: {fileID: 2560710919209511419, guid: 5f4aad1d9cbdb7349a95e8bc5ad19ac3, type: 3}
     proyectile: {fileID: 114603109236332726, guid: 23823b92ecbc33747b2136a9e40940e9,
       type: 3}
-  - model: {fileID: 423390772387732942, guid: d50b60ce10d810e409a8c73b87272182, type: 3}
+  - model: {fileID: 423390772387732942, guid: 7981b023f245d5f478460322a49f80d6, type: 3}
     proyectile: {fileID: 114917760237782132, guid: ef3225486d257bd41ae84d88ca392878,
       type: 3}
-  - model: {fileID: 7105368450638325719, guid: 364903c1f29ae0b42a84c97bf5080009, type: 3}
+  - model: {fileID: 7105368450638325719, guid: b058b5719207d314e851cd279c5dce15, type: 3}
     proyectile: {fileID: 114377964005711154, guid: 0b969401c57e3f748a15d3ea298eeed5,
       type: 3}
-  - model: {fileID: 8010125135160857214, guid: 368895ca3a763b742a3d4356ad113ac0, type: 3}
+  - model: {fileID: 8010125135160857214, guid: ae0c6e271d6ab424496afd26501bb256, type: 3}
     proyectile: {fileID: 114950294977552282, guid: be29bf9e77e05ac4d828dbea7fbdf412,
       type: 3}
-  - model: {fileID: 4487248363907064288, guid: a110560f47e0e7d40939897c96c3940d, type: 3}
+  - model: {fileID: 4487248363907064288, guid: 9e8d52b236b9ec24caa345dde0bb17c6, type: 3}
     proyectile: {fileID: 114581091921189798, guid: a0463a61dd6db5c4ca24663fdbe1affb,
       type: 3}
-  - model: {fileID: 187535504260878168, guid: 55c599a9745f29149b4819a14ad6f4eb, type: 3}
+  - model: {fileID: 187535504260878168, guid: 9c55f71a68d9ba2419ac207e16b6cb31, type: 3}
     proyectile: {fileID: 114869662409283510, guid: 8e97c45fd151fa3418ece17577e8cb3a,
       type: 3}
-  - model: {fileID: 2953247193593902212, guid: 2fbdaa7c10308964da80ee90c762bc89, type: 3}
+  - model: {fileID: 2953247193593902212, guid: 390f5af4564e58f449a49144d16289cd, type: 3}
     proyectile: {fileID: 114609191506733480, guid: 57f0a3e92fa18d24a81d23227b476c23,
       type: 3}
-  - model: {fileID: 8010125135160857214, guid: 9df26ab79ad5a2e48adca43701dc84b8, type: 3}
+  - model: {fileID: 8010125135160857214, guid: f39ab335cee2b8e498de9af9f120d51f, type: 3}
     proyectile: {fileID: 114161646384239228, guid: 214e996bd2e78eb48bedd30671bddd57,
       type: 3}
 --- !u!4 &153078454

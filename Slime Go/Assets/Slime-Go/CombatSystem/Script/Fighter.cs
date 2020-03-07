@@ -27,7 +27,6 @@ public class Fighter : MonoBehaviour
     {
         this.proyectile = proyectile;
         var m = Instantiate(model, this.model);
-        m.GetComponent<Animator>().enabled = false;
     }
 
     public void Attack()

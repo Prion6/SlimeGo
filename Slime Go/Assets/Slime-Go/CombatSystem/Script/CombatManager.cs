@@ -28,6 +28,12 @@ public class CombatManager : MonoBehaviour
     {
         lastTime = Time.time;
         data = DataManager.LoadData<Data>();
+
+        //DEBUG!
+        var a = Random.Range(0, 9);
+        var b = Random.Range(0, 9);
+        player.Init(skins[a].proyectile, skins[a].model);
+        enemy.Init(skins[b].proyectile, skins[b].model);
     }
 
     //Con esta linea inicias una batalla entre dos slimes randoms, usenla para el bien de la nacion slime o7.
