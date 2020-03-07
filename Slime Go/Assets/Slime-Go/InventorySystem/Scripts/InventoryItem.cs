@@ -52,6 +52,8 @@ namespace InventorySystem
                         newSlot.SetName(item.name);
                         newSlot.Description = rawItem.description;
                         newSlot.Image = (rawItem.sprite);
+                        newSlot.Amount = item.amount.ToString();
+
                         break;
                     }
                 }

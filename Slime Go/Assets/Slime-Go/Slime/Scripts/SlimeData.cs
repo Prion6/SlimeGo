@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Slime
 {
+    
     public class SlimeData
     {
         public SlimeType type;

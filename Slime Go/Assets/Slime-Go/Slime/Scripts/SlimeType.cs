@@ -6,12 +6,15 @@ namespace Slime
 {
     public enum SlimeType
     {
-        Normal,
-        Water,
-        Stone,
-        Electricity,
+        Electric,
         Fire,
+        Gem,
+        Ice,
+        lava,
         Light,
-        Darkness
+        Metal,
+        Rock,
+        Spike,
+        Water,
     }
 }

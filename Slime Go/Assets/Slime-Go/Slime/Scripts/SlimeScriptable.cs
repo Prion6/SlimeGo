@@ -2,6 +2,7 @@
 
 namespace Slime
 {
+    [CreateAssetMenu(fileName = "New Slime", menuName = "SlimeGo.../Slime")]
     public class SlimeScriptable : ScriptableObject
     {
         public string slimeName;

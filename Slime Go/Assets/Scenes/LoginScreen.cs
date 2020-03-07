@@ -1,4 +1,5 @@
 ﻿using DataSystem;
+using Slime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -61,9 +62,17 @@ public class LoginScreen : MonoBehaviour
 
         var newAcount = new Acount(inputName.text, inputPassword.text);
         data.acounts.Add(newAcount);
-        newAcount.player.slimes.Add(new DataSystem.Slime("Lava",20,20,1,"Lava"));
+
+        newAcount.player.items.Add(new DataSystem.Item("Small Potion",3));
+        newAcount.player.items.Add(new DataSystem.Item("Medium Potion", 3));
+        newAcount.player.items.Add(new DataSystem.Item("Big Potion", 3));
+
+        newAcount.player.slimes.Add(new DataSystem.Slime("Lava",100,100,10, SlimeType.Water.ToString()));
+         
         DataManager.SaveData<Data>(data);
         Globals.playerName = inputName.text;
+
+        //SceneManager.LoadScene("QuestionScreen");
         SceneManager.LoadScene("MainScreen");
     }
 }
