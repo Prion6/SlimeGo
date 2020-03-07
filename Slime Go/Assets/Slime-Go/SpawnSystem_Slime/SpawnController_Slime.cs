@@ -16,13 +16,10 @@ namespace SpawnSystem.Slime
         {
             if(!spawning)
             {
-                Debug.Log("Spawners: " + spawners.Count + " Min: " + minSpawns + " Max: " + maxSpawns);
                 foreach (Spawner s in spawners)
                 {
                     s.minSpawns = (int)Mathf.Ceil(minSpawns / spawners.Count);
-                    Debug.Log("new Min: " + s.minSpawns);
                     s.maxSpawns = (int)Mathf.Ceil(maxSpawns / spawners.Count);
-                    Debug.Log("new Max: " + s.maxSpawns);
                 }
                 if (spawners.Count != 0)
                     spawning = true;

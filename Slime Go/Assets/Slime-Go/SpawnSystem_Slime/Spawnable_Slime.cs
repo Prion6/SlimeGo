@@ -15,7 +15,9 @@ namespace SpawnSystem.Slime
         
         public GameObject Spawn(float x, float z)
         {
-            return Instantiate(gameObject,new Vector3(x,0,z),Quaternion.identity);
+            var s = Instantiate(gameObject);
+            s.gameObject.transform.position = new Vector3(x, 0, z);
+            return s;
         }
     }
 }
