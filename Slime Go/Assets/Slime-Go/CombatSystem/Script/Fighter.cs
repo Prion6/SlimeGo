@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Animator))]
 public class Fighter : MonoBehaviour
@@ -11,13 +12,31 @@ public class Fighter : MonoBehaviour
     }
 
     public Animator anim;
+    public Proyectile proyectile;
+    public Image healthBar;
 
+    public float maxLife = 100;
+    private float currentLife = 100;
+
+    public Transform model;
     public FightingActions status;
+
+    public UnityEngine.Events.UnityEvent onDead;
+
+    public void Init(Proyectile proyectile, GameObject model)
+    {
+        this.proyectile = proyectile;
+        var m = Instantiate(model, this.model);
+        m.GetComponent<Animator>().enabled = false;
+    }
 
     public void Attack()
     {
         if (status == FightingActions.IDDLE)
+        {
+            proyectile.Shoot(transform.position + transform.forward, transform.rotation);
             anim.SetTrigger("Attack");
+        }
     }
 
     public void SuperAttack()
@@ -50,7 +69,17 @@ public class Fighter : MonoBehaviour
 
     protected virtual void RecieveDamage()
     {
+        currentLife -= 10;
 
+        currentLife = Mathf.Clamp(currentLife, 0, maxLife);
+
+        if (currentLife == 0)
+        {
+            onDead.Invoke();
+            gameObject.SetActive(false);
+        }
+
+        healthBar.fillAmount = currentLife / maxLife;
     }
 
     protected virtual void MoveLeft()

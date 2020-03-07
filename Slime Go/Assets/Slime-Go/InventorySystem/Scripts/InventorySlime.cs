@@ -19,7 +19,7 @@ namespace InventorySystem
 
         public void Awake()
         {
-            slimes = Resources.LoadAll<SlimeScriptable>("");
+            slimes = Resources.LoadAll<SlimeScriptable>("");         
         }
 
 
