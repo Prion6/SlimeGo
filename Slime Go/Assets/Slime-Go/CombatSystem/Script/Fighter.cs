@@ -33,6 +33,7 @@ public class Fighter : MonoBehaviour
     {
         if (status == FightingActions.IDDLE)
         {
+            FindObjectOfType<SoundManager>().Play("normal attack");
             proyectile.Shoot(transform.position + transform.forward, transform.rotation);
             anim.SetTrigger("Attack");
         }
@@ -40,6 +41,7 @@ public class Fighter : MonoBehaviour
 
     public void SuperAttack()
     {
+        FindObjectOfType<SoundManager>().Play("charge attack");
         if (status == FightingActions.IDDLE)
             anim.SetTrigger("SuperAttack");
     }

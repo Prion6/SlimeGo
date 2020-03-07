@@ -15,6 +15,7 @@ public class CombatManager : MonoBehaviour
     private Data data;
     public int waitTime = 1;
 
+
     private bool gameover;
 
     public List<Skin> skins = new List<Skin>();
@@ -28,6 +29,8 @@ public class CombatManager : MonoBehaviour
     {
         lastTime = Time.time;
         data = DataManager.LoadData<Data>();
+
+        FindObjectOfType<SoundManager>().Play("battle theme");
 
         //DEBUG!
         var a = Random.Range(0, 9);
@@ -58,6 +61,7 @@ public class CombatManager : MonoBehaviour
 
     public void Win()
     {
+        FindObjectOfType<SoundManager>().Play("Win sound");
         print("GANE!");
         gameover = true;
         FindObjectOfType<FighterInput>().enabled = false;
@@ -65,6 +69,7 @@ public class CombatManager : MonoBehaviour
 
     public void Lose()
     {
+        FindObjectOfType<SoundManager>().Play("Lose");
         print("PERDI!");
         gameover = true;
         FindObjectOfType<FighterInput>().enabled = false;
