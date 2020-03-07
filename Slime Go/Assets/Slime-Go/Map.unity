@@ -341,7 +341,7 @@ PrefabInstance:
     - target: {fileID: 114105500206378512, guid: 35ce2bb4caba9434db5e656796b632b1,
         type: 3}
       propertyPath: _options.locationOptions.zoom
-      value: 16.5
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 114105500206378512, guid: 35ce2bb4caba9434db5e656796b632b1,
         type: 3}
@@ -854,6 +854,7 @@ GameObject:
   m_Component:
   - component: {fileID: 445752028}
   - component: {fileID: 445752027}
+  - component: {fileID: 445752029}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -892,6 +893,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &445752029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445752026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a33bea71e99ee5f4cba9d8841f810f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawners: []
+  minSpawns: 0
+  maxSpawns: 60
+  spawning: 0
+  coolDown: 15
 --- !u!28 &994196879
 Texture2D:
   m_ObjectHideFlags: 0

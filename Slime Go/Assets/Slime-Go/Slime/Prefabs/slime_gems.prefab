@@ -335,7 +335,7 @@ Transform:
   m_GameObject: {fileID: 2560710919209511417}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 2.3, y: 2.3, z: 2.3}
   m_Children:
   - {fileID: 2560710919209743839}
   - {fileID: 2560710919209743829}
@@ -402,6 +402,7 @@ GameObject:
   - component: {fileID: 2560710919209743835}
   - component: {fileID: 95532811668931046}
   - component: {fileID: 114033285431989064}
+  - component: {fileID: 65201946914543174}
   m_Layer: 0
   m_Name: slime_gems
   m_TagString: Untagged
@@ -418,7 +419,7 @@ Transform:
   m_GameObject: {fileID: 2560710919209511419}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.040415, y: 1.040415, z: 1.040415}
+  m_LocalScale: {x: 25, y: 25, z: 25}
   m_Children:
   - {fileID: 4085605295381209525}
   m_Father: {fileID: 0}
@@ -455,6 +456,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107b4066f0f5c9f4ba59608d90dab8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxScale: 35
+  minScale: 15
+  maxMass: 1000
+  minMass: 10
+--- !u!65 &65201946914543174
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2560710919209511419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.2, z: 0.3}
+  m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!1 &2560710919209511421
 GameObject:
   m_ObjectHideFlags: 0

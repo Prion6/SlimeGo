@@ -1,20 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Slime;
 
-namespace SpawnSystem.Slime
+namespace SpawnSystem.Item
 {
-    public class SpawnController_Slime : SpawnController
+    public class SpawnController_Item : SpawnController
     {
-        private void Start()
-        {
-            
-        }
 
+        // Update is called once per frame
         protected override void Update()
         {
-            if(!spawning)
+            if (!spawning)
             {
                 foreach (Spawner s in spawners)
                 {
@@ -29,8 +25,8 @@ namespace SpawnSystem.Slime
 
         public override void MakeSpawn(Spawner spawner)
         {
-            spawner.Spawn(((Spawner_Slime)spawner).spawnableSlimes[Random.Range(0, ((Spawner_Slime)spawner).spawnableSlimes.Count-1)]);
+            spawner.Spawn(((Spawner_Item)spawner).spawnableItems[Random.Range(0, ((Spawner_Item)spawner).spawnableItems.Count - 1)]);
         }
     }
-
 }
+
