@@ -6,18 +6,25 @@ namespace SpawnSystem.Slime
     [System.Serializable]
     public class Spawnable_Slime : MonoBehaviour,ISpawnable
     {
-        SlimeScriptable slimeData;
-        
-        public Spawnable_Slime(SlimeType type)
-        {
-            
-        }
-        
+        private float mass;
+        public float maxScale;
+        public float minScale;
+        public float maxMass;
+        public float minMass;
+
         public GameObject Spawn(float x, float z)
         {
-            var s = Instantiate(gameObject);
-            s.gameObject.transform.position = new Vector3(x, 0, z);
-            return s;
+            mass = Random.Range(minMass, maxMass);
+            float m = (maxScale - minScale) / (maxMass - minMass);
+            float scale = m * mass;
+            GameObject copy = Instantiate(gameObject, new Vector3(x, 2, z), Quaternion.identity);
+            copy.transform.localScale = new Vector3(scale, scale, scale);
+            return copy;
+        }
+
+        private void OnMouseUp()
+        {
+            //Entregar este slime a la variable estatica
         }
     }
 }

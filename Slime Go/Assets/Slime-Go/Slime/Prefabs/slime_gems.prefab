@@ -402,6 +402,7 @@ GameObject:
   - component: {fileID: 2560710919209743835}
   - component: {fileID: 95532811668931046}
   - component: {fileID: 114033285431989064}
+  - component: {fileID: 65201946914543174}
   m_Layer: 0
   m_Name: slime_gems
   m_TagString: Untagged
@@ -455,6 +456,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107b4066f0f5c9f4ba59608d90dab8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxScale: 35
+  minScale: 15
+  maxMass: 1000
+  minMass: 10
+--- !u!65 &65201946914543174
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2560710919209511419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.2, z: 0.3}
+  m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!1 &2560710919209511421
 GameObject:
   m_ObjectHideFlags: 0

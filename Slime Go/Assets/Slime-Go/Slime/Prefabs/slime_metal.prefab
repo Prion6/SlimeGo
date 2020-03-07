@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4487248363907300800}
   - component: {fileID: 95938336275732370}
   - component: {fileID: 114438951780357828}
+  - component: {fileID: 65038738721295614}
   m_Layer: 0
   m_Name: slime_metal
   m_TagString: Untagged
@@ -64,6 +65,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107b4066f0f5c9f4ba59608d90dab8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxScale: 35
+  minScale: 15
+  maxMass: 1000
+  minMass: 10
+--- !u!65 &65038738721295614
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4487248363907064288}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.3, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0.05}
 --- !u!1 &6480302617224761714
 GameObject:
   m_ObjectHideFlags: 0

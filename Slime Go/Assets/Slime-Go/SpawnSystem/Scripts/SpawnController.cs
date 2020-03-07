@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace SpawnSystem
@@ -11,6 +12,11 @@ namespace SpawnSystem
         public bool spawning;
         public float coolDown;
         private float timer;
+
+        public void Start()
+        {
+            timer = coolDown;
+        }
 
 
         protected virtual void Update()
@@ -25,20 +31,29 @@ namespace SpawnSystem
                 }
                 if(count < minSpawns)
                 {
-                    Spawn();
+                    StartCoroutine(Spawn());
                     timer = 0;
                 }
             }
         }
-
+        /*
         protected void Spawn()
         {
             foreach (Spawner s in spawners)
             {
                 MakeSpawn(s);
             }
-        }
+        }*/
 
         public abstract void MakeSpawn(Spawner spawner);
+
+        IEnumerator Spawn()
+        {
+            foreach (Spawner s in spawners)
+            {
+                MakeSpawn(s);
+                yield return new WaitForSeconds(Random.Range(0,1));
+            }
+        }
     }
 }
