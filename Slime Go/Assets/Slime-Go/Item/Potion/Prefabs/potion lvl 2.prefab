@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 7594345406207680179}
   - component: {fileID: 7594345406208777331}
   - component: {fileID: 7594345406197297523}
+  - component: {fileID: 114084121235755626}
+  - component: {fileID: 114188013770983464}
+  - component: {fileID: 5688988948664993461}
   m_Layer: 0
   m_Name: potion lvl 2
   m_TagString: Untagged
@@ -97,3 +100,44 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114084121235755626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7594345406206771891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeac30c197d061c46a14acc0fc264814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    name: Medium Potion
+    amount: 1
+--- !u!114 &114188013770983464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7594345406206771891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29adffd8fd95b441ab690bee221af18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healPower: 0
+--- !u!65 &5688988948664993461
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7594345406206771891}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1462727, y: 1.6582487, z: 1.6311415}
+  m_Center: {x: 0.0070646405, y: 0.1322409, z: 0.6920974}

@@ -22,7 +22,7 @@ namespace SpawnSystem.Slime
             return copy;
         }
 
-        private void OnMouseUp()
+        private void OnMouseDown()
         {
             //Entregar este slime a la variable estatica
         }
