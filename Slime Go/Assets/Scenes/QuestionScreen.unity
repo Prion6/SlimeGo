@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -147,8 +147,8 @@ Camera:
   m_GameObject: {fileID: 97634539}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.12941177, g: 0.5137255, b: 0.49803925, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -439,6 +439,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1019252409}
     m_Modifications:
+    - target: {fileID: 5805571875290824027, guid: dd1526a460453084ea870f06aff56580,
+        type: 3}
+      propertyPath: m_Name
+      value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805571875290824027, guid: dd1526a460453084ea870f06aff56580,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5805571875290824026, guid: dd1526a460453084ea870f06aff56580,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -544,16 +554,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.49999955
       objectReference: {fileID: 0}
-    - target: {fileID: 5805571875290824027, guid: dd1526a460453084ea870f06aff56580,
-        type: 3}
-      propertyPath: m_Name
-      value: Button
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805571875290824027, guid: dd1526a460453084ea870f06aff56580,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd1526a460453084ea870f06aff56580, type: 3}
 --- !u!1 &748354899
@@ -594,7 +594,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.4296875, y: -202}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -210, y: -576}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &748354901
@@ -946,21 +946,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6311008454663227848, guid: 259e051b9abd3f544a963a95ff29a1c4,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6311008454663227848, guid: 259e051b9abd3f544a963a95ff29a1c4,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6311008454663227848, guid: 259e051b9abd3f544a963a95ff29a1c4,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6749125447056336885, guid: 259e051b9abd3f544a963a95ff29a1c4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1069,6 +1054,21 @@ PrefabInstance:
     - target: {fileID: 7012693323584513768, guid: 259e051b9abd3f544a963a95ff29a1c4,
         type: 3}
       propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6311008454663227848, guid: 259e051b9abd3f544a963a95ff29a1c4,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6311008454663227848, guid: 259e051b9abd3f544a963a95ff29a1c4,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6311008454663227848, guid: 259e051b9abd3f544a963a95ff29a1c4,
+        type: 3}
+      propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
