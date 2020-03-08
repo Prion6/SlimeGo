@@ -9,13 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f386309a8f86f48aaabbbd02b9f95059, type: 3}
-  m_Name: NewReplaceFeatureModifier
+  m_Script: {fileID: 11500000, guid: dd8aacc1880ff504d9531b4d61c86458, type: 3}
+  m_Name: NewPrefabModifier
   m_EditorClassIdentifier: 
   Active: 1
   _options:
-    prefab: {fileID: 100002, guid: 7462ca72c6449714fa9a5b18f1cfc68c, type: 3}
+    prefab: {fileID: 7190810129127064922, guid: 6be6befed4678d74d977d3427294bd76,
+      type: 3}
     scaleDownWithWorld: 1
-  _prefabLocations:
-  - -35.404540, -71.632050
-  _explicitlyBlockedFeatureIds: []

@@ -8,12 +8,13 @@ using UnityEngine.UI;
 public class HospitalManager : MonoBehaviour
 {
     public Button solver_Pref;
-    public RectTransform buttonParent;
+    private RectTransform buttonParent;
     private List<Button> buttons;
 
     private void Start()
     {
         buttons = new List<Button>();
+        buttonParent = FindObjectOfType<ICanvasMain>().gameObject.GetComponent<RectTransform>();
     }
 
     private void OnMouseDown()
