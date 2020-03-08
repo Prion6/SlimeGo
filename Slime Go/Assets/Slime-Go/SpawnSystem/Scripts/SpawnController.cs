@@ -31,29 +31,20 @@ namespace SpawnSystem
                 }
                 if(count < minSpawns)
                 {
-                    StartCoroutine(Spawn());
+                    Spawn();
                     timer = 0;
                 }
             }
         }
-        /*
+        
         protected void Spawn()
         {
             foreach (Spawner s in spawners)
             {
                 MakeSpawn(s);
             }
-        }*/
+        }
 
         public abstract void MakeSpawn(Spawner spawner);
-
-        IEnumerator Spawn()
-        {
-            foreach (Spawner s in spawners)
-            {
-                MakeSpawn(s);
-                yield return new WaitForSeconds(Random.Range(0,1));
-            }
-        }
     }
 }

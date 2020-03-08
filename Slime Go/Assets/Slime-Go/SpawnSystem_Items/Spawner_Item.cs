@@ -12,7 +12,6 @@ namespace SpawnSystem.Item
         {
             base.Awake();
             SpawnController_Item spawnManager = FindObjectOfType<SpawnController_Item>();
-            spawnManager.spawners.Add(this);
         }
     }
 }
