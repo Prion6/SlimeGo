@@ -54,6 +54,20 @@ namespace DataSystem
             this.slimes = new List<Slime>();
             this.items = new List<Item>();
         }
+
+        public Slime GetBestSlime()
+        {
+            var mySlime = new Slime();
+
+            for(int i = 0; i < slimes.Count; i++)
+            {
+                if (i < slimes.Count && slimes[i].life > slimes[i + 1].life) mySlime = slimes[i];
+            }
+
+            return mySlime;
+        }
+
+
     }
 
     [System.Serializable]
@@ -75,6 +89,10 @@ namespace DataSystem
             this.weight = weight;
             this.mainType = mainType;
             this.secondType = secondType;
+        }
+
+        public Slime()
+        {
         }
     }
 
