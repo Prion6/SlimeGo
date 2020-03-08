@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using Slime;
+using DataSystem;
 
 namespace SpawnSystem.Slime
 {
     [System.Serializable]
     public class Spawnable_Slime : MonoBehaviour,ISpawnable
     {
+        public SlimeType type;
         private float mass;
         public float maxScale;
         public float minScale;
@@ -25,7 +27,21 @@ namespace SpawnSystem.Slime
 
         private void OnMouseDown()
         {
-            //Entregar este slime a la variable estatica
+            float m = (25 - 200) / (maxMass - minMass);
+            int maxLife = (int)(m * mass);
+            try
+            {
+                var d = DataManager.LoadData<Data>();
+                var acount = d.GetAcount(Globals.playerName);
+                DataSystem.Slime s = acount.player.GetBestSlime();
+                SlimeData player = new SlimeData(s.mainType, s.life, s.maxLife, s.weight);
+                SlimeData enemy = new SlimeData(type.ToString(), maxLife, maxLife, mass);
+                StartCoroutine(CombatManager.InitBattle(player, enemy));
+            }
+            catch (System.Exception e)
+            {
+                Debug.Log("error");
+            }
         }
     }
 }
