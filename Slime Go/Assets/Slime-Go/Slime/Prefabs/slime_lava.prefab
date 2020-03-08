@@ -251,9 +251,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107b4066f0f5c9f4ba59608d90dab8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 4
+  mass: 192.43205
   maxScale: 35
   minScale: 15
-  maxMass: 1000
+  maxMass: 400
   minMass: 10
 --- !u!65 &65109558048330068
 BoxCollider:

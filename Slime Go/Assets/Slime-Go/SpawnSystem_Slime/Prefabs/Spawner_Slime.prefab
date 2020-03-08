@@ -106,8 +106,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 30
   spawned: []
-  minSpawns: 0
-  maxSpawns: 0
+  minSpawns: 5
+  maxSpawns: 10
   spawnableSlimes:
   - {fileID: 114379366220430774, guid: 396493909d7ea6642992ec6930573edd, type: 3}
   - {fileID: 114867548782402148, guid: 2a4220c390ccef4449cbc807d3dd575a, type: 3}

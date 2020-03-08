@@ -19,7 +19,8 @@ namespace InventorySystem
 
         public void Awake()
         {
-            slimes = Resources.LoadAll<SlimeScriptable>("");         
+            slimes = Resources.LoadAll<SlimeScriptable>("");
+            Debug.Log("A: "+slimes.Length);
         }
 
 
@@ -50,7 +51,7 @@ namespace InventorySystem
             {
                 foreach (var rawSlimes in slimes)
                 {
-                    if (slime.name.Equals(rawSlimes.slimeName) || slime.name.Equals(rawSlimes.name))
+                    if (slime.mainType.Equals(rawSlimes.type.ToString()))
                     {
                         var newSlot = Instantiate(slot_Pref, pivot);
                         newSlot.TextName = (slime.name);

@@ -14,6 +14,8 @@ namespace QuestionSystem.Slime
         public GameObject Slime;
         public List<Sprite> sprites;
 
+        public Button Empezar;
+
         public void Check()
         {
             int lastValue = 0;
@@ -47,23 +49,27 @@ namespace QuestionSystem.Slime
                         actualValue = lastValue;
                         Debug.Log((SlimeType)i);
                         type = (SlimeType)i;
-
-                        var data = DataManager.LoadData<Data>();
-                        if (data == null) return;
-                        var acount = data.GetAcount(Globals.playerName);
-                        if (acount == null) return;
-                         
-                        acount.player.slimes.Add(new DataSystem.Slime("Slime "+ type.ToString(),25,25,10,type.ToString()));
-                        DataManager.SaveData<Data>(data);
-
                         Slime.GetComponent<Image>().sprite = sprites[(int)type];
                     }
                 }
                 lastValue = 0;
                 //Debug.Log("type" + type);
             }
+            try
+            {
+                var data = DataManager.LoadData<Data>();
+                var acount = data.GetAcount(Globals.playerName);
+                acount.player.slimes.Add(new DataSystem.Slime("Slime " + type.ToString(), 250, 250, 100, type.ToString()));
+                DataManager.SaveData<Data>(data);
+            }
+            catch
+            {
+                Debug.Log("haaaaaa perro! no hay slimes wey");
+            }
             Slime.transform.localScale = new Vector3(2f,2.5f,2f);
             Slime.SetActive(true);
+            Empezar.gameObject.SetActive(true);
+
             //Debug.Log(type.ToString());
         }
 

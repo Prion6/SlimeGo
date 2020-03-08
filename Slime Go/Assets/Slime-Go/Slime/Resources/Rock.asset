@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Rock
   m_EditorClassIdentifier: 
   slimeName: Rock
+  type: 7
   InventoryImage: {fileID: 21300000, guid: 974ac97f2462eef4482399d27d8825b9, type: 3}
   prefab: {fileID: 0}

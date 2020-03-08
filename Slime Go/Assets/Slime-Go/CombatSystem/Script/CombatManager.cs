@@ -32,6 +32,7 @@ public class CombatManager : MonoBehaviour
     }*/
 
     public SlimeData toCatch;
+    public int playerInitialLive;
 
     private void Start()
     {
@@ -66,7 +67,11 @@ public class CombatManager : MonoBehaviour
         var manager = FindObjectOfType<CombatManager>();
         manager.toCatch = enemy;
         manager.player.Init(manager.fighters[(int)player.type].basicAttack, manager.fighters[(int)player.type].specialAttack, manager.fighters[(int)player.type].model);
+        manager.player.LateInit(player.mass, player.type);
+        Debug.Log("MP: " + player.mass);
         manager.enemy.Init(manager.fighters[(int)enemy.type].basicAttack, manager.fighters[(int)enemy.type].specialAttack, manager.fighters[(int)enemy.type].model);
+        manager.enemy.LateInit(enemy.mass, enemy.type);
+        Debug.Log("Enemy: " + enemy.type);
 
         manager.InitButtons();
     }
@@ -181,17 +186,39 @@ public class CombatManager : MonoBehaviour
     public void Win()
     {
         FindObjectOfType<SoundManager>().Play("Win sound");
-        print("GANE!");
         gameover = true;
         FindObjectOfType<FighterInput>().enabled = false;
+        EndFight();
+        SceneManager.LoadScene("MainScreen");
+
     }
 
     public void Lose()
     {
         FindObjectOfType<SoundManager>().Play("Lose");
-        print("PERDI!");
         gameover = true;
         FindObjectOfType<FighterInput>().enabled = false;
+        EndFight();
+        SceneManager.LoadScene("MainScreen");
+    }
+
+    public void EndFight()
+    {
+        try
+        {
+            var d = DataManager.LoadData<Data>();
+            var acount = d.GetAcount(Globals.playerName);
+            foreach(DataSystem.Slime s in acount.player.slimes)
+            {
+                if(s.weight == player.weigth && s.mainType.Equals(player.type.ToString()))
+                {
+                    s.life = (int)player.currentLife;
+                    DataManager.SaveData<Data>(d);
+                    return;
+                }
+            }
+        }
+        catch { }
     }
 
     private void Update()

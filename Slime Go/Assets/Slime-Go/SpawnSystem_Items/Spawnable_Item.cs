@@ -22,9 +22,20 @@ namespace SpawnSystem.Item
             {
                 var d = DataManager.LoadData<Data>();
                 var acount = d.GetAcount(Globals.playerName);
+
+                foreach (var item in acount.player.items)
+                {
+                    if (item.name.Equals(this.item.name))
+                    {
+                        item.amount++;
+                        DataManager.SaveData<Data>(d);
+                        Destroy(this.gameObject);
+                        return;
+                    }
+                }
+
                 acount.player.items.Add(item);
                 DataManager.SaveData<Data>(d);
-                Debug.Log("Yay");
                 Destroy(this.gameObject);
             }
             catch(Exception e)

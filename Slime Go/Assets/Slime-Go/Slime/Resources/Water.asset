@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Water
   m_EditorClassIdentifier: 
   slimeName: Water
+  type: 9
   InventoryImage: {fileID: 21300000, guid: 7b7404d5ee0dec54f9a4aeee1d6ed700, type: 3}
   prefab: {fileID: 0}

@@ -37,6 +37,7 @@ public class LoginScreen : MonoBehaviour
             {
                 Globals.playerName = inputName.text;
                 SceneManager.LoadScene("MainScreen");
+                return;
             }
         }
 

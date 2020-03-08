@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Fire
   m_EditorClassIdentifier: 
   slimeName: Fire
+  type: 1
   InventoryImage: {fileID: 21300000, guid: 230e9cb7637cd8b448f5c5d4011fa136, type: 3}
   prefab: {fileID: 0}

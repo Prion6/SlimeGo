@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Lava
   m_EditorClassIdentifier: 
   slimeName: Lava
+  type: 4
   InventoryImage: {fileID: 21300000, guid: d9a63ed0513e2394cac325331f1ba04c, type: 3}
   prefab: {fileID: 0}

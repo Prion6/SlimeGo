@@ -36,6 +36,16 @@ public class Fighter : MonoBehaviour , IHealable
         var m = Instantiate(model, this.model);
     }
 
+    public void LateInit(float mass, SlimeType type)
+    {
+        this.type = type;
+        weigth = mass;
+        this.basicAttack.damage = (int)(5 * weigth);
+        this.specialAttack.damage = (int)(10 * weigth);
+        maxLife = weigth * 10;
+        currentLife = maxLife;
+    }
+
     public void Attack()
     {
         if (status == FightingActions.IDDLE)

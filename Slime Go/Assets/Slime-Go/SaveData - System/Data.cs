@@ -57,12 +57,18 @@ namespace DataSystem
 
         public Slime GetBestSlime()
         {
-            var mySlime = new Slime();
+            Slime mySlime = slimes[0];
 
             for(int i = 0; i < slimes.Count; i++)
             {
-                if (i < slimes.Count && slimes[i].life > slimes[i + 1].life) mySlime = slimes[i];
+                if (slimes[i].life > mySlime.life)
+                {
+                    mySlime = slimes[i];
+                }
             }
+
+            if (mySlime.life <= 0)
+                return null;
 
             return mySlime;
         }

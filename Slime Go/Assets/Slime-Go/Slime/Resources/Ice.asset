@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Ice
   m_EditorClassIdentifier: 
   slimeName: Ice
+  type: 3
   InventoryImage: {fileID: 21300000, guid: 072e75e7941d0c34d94f849d5d10b0da, type: 3}
   prefab: {fileID: 0}

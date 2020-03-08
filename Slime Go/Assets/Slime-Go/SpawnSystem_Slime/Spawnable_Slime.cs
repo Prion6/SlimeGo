@@ -8,7 +8,7 @@ namespace SpawnSystem.Slime
     public class Spawnable_Slime : MonoBehaviour,ISpawnable
     {
         public SlimeType type;
-        private float mass;
+        public float mass;
         public float maxScale;
         public float minScale;
         public float maxMass;
@@ -20,7 +20,7 @@ namespace SpawnSystem.Slime
             float m = (maxScale - minScale) / (maxMass - minMass);
             float scale = m * mass;
             GameObject copy = Instantiate(gameObject);
-            copy.transform.position = new Vector3(x, 2, z);
+            copy.transform.position = new Vector3(x, 1, z);
             copy.transform.localScale = new Vector3(scale, scale, scale);
             return copy;
         }

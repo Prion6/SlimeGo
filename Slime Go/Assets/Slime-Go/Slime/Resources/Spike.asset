@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Spike
   m_EditorClassIdentifier: 
   slimeName: Spike
+  type: 8
   InventoryImage: {fileID: 21300000, guid: bb89493c599b9f944af501b6180f2e43, type: 3}
   prefab: {fileID: 0}
