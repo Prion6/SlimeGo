@@ -17,7 +17,7 @@ namespace QuestionSystem.Slime
         {
             int lastValue = 0;
             int actualValue = 0;
-            SlimeType type = (SlimeType)System.Enum.Parse(typeof(SlimeType), "Normal");
+            SlimeType type = (SlimeType)System.Enum.Parse(typeof(SlimeType), "Water");
             List <SlimeType> types = new List<SlimeType>();
 
             for (int i = 0; i < answers.Count; i++)
@@ -39,7 +39,7 @@ namespace QuestionSystem.Slime
                 for (int j = 0; j < types.Count; j++)
                 {
                     // Debug.Log("son iguales " + ((SlimeType)i == (SlimeType)j));
-                    Debug.Log("son iguales  " + (SlimeType)i + " == " + types[j]);
+                    //Debug.Log("son iguales  " + (SlimeType)i + " == " + types[j]);
                     if ((SlimeType)i == types[j]) lastValue++;
                     if (lastValue > actualValue)
                     {
@@ -52,8 +52,9 @@ namespace QuestionSystem.Slime
                 lastValue = 0;
                 //Debug.Log("type" + type);
             }
+            Slime.transform.localScale = new Vector3(2f,2.5f,2f);
             Slime.SetActive(true);
-            Debug.Log(type.ToString());
+            //Debug.Log(type.ToString());
         }
 
     }
