@@ -84,14 +84,28 @@ namespace QuestionSystem
             }
             else
             {
+                buttonParent.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, 80, buttonParent.rect.height);
                 questionText.text = "";
                 QuestionSolver newSolver = Instantiate(solver_Pref, buttonParent);
-                newSolver.SetText("Your Slime is...");
+                newSolver.SetText("Tu Slime es...");
                 buttons.Add(newSolver);
                 newSolver.AddListener(evn.Invoke);
+                StartCoroutine("Fade");
             }
         }
+
+        IEnumerator Fade()
+        {
+            yield return new WaitForSeconds(3);
+            buttons[0].gameObject.SetActive(false);
+            QuestionSolver newSolver = Instantiate(solver_Pref, buttonParent);
+            newSolver.SetText("Iniciar Juego");
+            buttons.Add(newSolver);
+        }
+
     }
+
+
 
 
 }
