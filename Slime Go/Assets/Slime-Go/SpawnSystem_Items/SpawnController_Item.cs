@@ -25,7 +25,19 @@ namespace SpawnSystem.Item
 
         public override void MakeSpawn(Spawner spawner)
         {
-            spawner.Spawn(((Spawner_Item)spawner).spawnableItems[Random.Range(0, ((Spawner_Item)spawner).spawnableItems.Count - 1)]);
+            int limit = Random.Range(0, 4);
+            for (int i = 1; i < limit; i++)
+            {
+                if (Random.Range(0f, 1f) <= 0.6f)
+                {
+                    spawner.Spawn(((Spawner_Item)spawner).spawnableItems[0]);
+                }
+                else
+                {
+                    spawner.Spawn(((Spawner_Item)spawner).spawnableItems[Random.Range(1, ((Spawner_Item)spawner).spawnableItems.Count - 1)]);
+
+                }
+            } 
         }
     }
 }
