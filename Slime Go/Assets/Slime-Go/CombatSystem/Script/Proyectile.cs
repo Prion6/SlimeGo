@@ -5,7 +5,7 @@ using UnityEngine;
 public class Proyectile : MonoBehaviour
 {
     public float speed = 10;
-
+    public int damage;
     private float lifeTime = 100;
 
     public void Shoot(Vector3 pos, Quaternion rotation)
@@ -29,6 +29,7 @@ public class Proyectile : MonoBehaviour
     {
         if (other.GetComponentInParent<Fighter>())
         {
+            other.GetComponentInParent<Fighter>().incomingDamage = damage;
             other.GetComponentInParent<Animator>().SetTrigger("Damaged");
             Destroy(gameObject);
         }

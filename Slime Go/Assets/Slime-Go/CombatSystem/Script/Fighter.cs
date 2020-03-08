@@ -12,8 +12,10 @@ public class Fighter : MonoBehaviour
     }
 
     public Animator anim;
-    public Proyectile proyectile;
+    public Proyectile basicAttack;
+    public Proyectile specialAttack;
     public Image healthBar;
+    public int incomingDamage;
 
     public float maxLife = 100;
     private float currentLife = 100;
@@ -23,9 +25,10 @@ public class Fighter : MonoBehaviour
 
     public UnityEngine.Events.UnityEvent onDead;
 
-    public void Init(Proyectile proyectile, GameObject model)
+    public void Init(Proyectile basicAttack, Proyectile specialAttack, GameObject model)
     {
-        this.proyectile = proyectile;
+        this.basicAttack = basicAttack;
+        this.specialAttack = specialAttack;
         var m = Instantiate(model, this.model);
     }
 
@@ -34,16 +37,19 @@ public class Fighter : MonoBehaviour
         if (status == FightingActions.IDDLE)
         {
             FindObjectOfType<SoundManager>().Play("normal attack");
-            proyectile.Shoot(transform.position + transform.forward, transform.rotation);
+            basicAttack.Shoot(transform.position + transform.forward, transform.rotation);
             anim.SetTrigger("Attack");
         }
     }
 
     public void SuperAttack()
     {
-        FindObjectOfType<SoundManager>().Play("charge attack");
         if (status == FightingActions.IDDLE)
+        {
+            FindObjectOfType<SoundManager>().Play("charge attack");
+            basicAttack.Shoot(transform.position + transform.forward, transform.rotation);
             anim.SetTrigger("SuperAttack");
+        } 
     }
 
     public void DodgeLeft()
@@ -70,7 +76,7 @@ public class Fighter : MonoBehaviour
 
     protected virtual void RecieveDamage()
     {
-        currentLife -= 10;
+        currentLife -= incomingDamage;
 
         currentLife = Mathf.Clamp(currentLife, 0, maxLife);
 
@@ -112,7 +118,7 @@ public class Fighter : MonoBehaviour
                 MoveRight();
                 break;
             case FightingActions.DAMAGED:
-                RecieveDamage();
+                RecieveDamage();    
                 break;
             case FightingActions.DEAD:
                 break;

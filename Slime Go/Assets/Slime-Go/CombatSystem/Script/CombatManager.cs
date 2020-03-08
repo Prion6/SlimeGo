@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Slime;
 
 public class CombatManager : MonoBehaviour
 {
@@ -18,12 +19,12 @@ public class CombatManager : MonoBehaviour
 
     private bool gameover;
 
-    public List<Skin> skins = new List<Skin>();
-
+    public List<FighterData> fighters = new List<FighterData>();
+    /*
     public enum Skins
     {
         ELECTRIC, FIRE, GEMS, ICE, LAVA, LIGHT, METAL, ROCK, SPIKES, WATER 
-    }
+    }*/
 
     private void Start()
     {
@@ -35,14 +36,14 @@ public class CombatManager : MonoBehaviour
         //DEBUG!
         var a = Random.Range(0, 9);
         var b = Random.Range(0, 9);
-        player.Init(skins[a].proyectile, skins[a].model);
-        enemy.Init(skins[b].proyectile, skins[b].model);
+        //player.Init(fighters[a].basicAttack, fighters[a].model);
+        //enemy.Init(fighters[b].basicAttack, fighters[b].model);
     }
 
     //Con esta linea inicias una batalla entre dos slimes randoms, usenla para el bien de la nacion slime o7.
     //StartCoroutine(CombatManager.InitBattle((CombatManager.Skins) UnityEngine.Random.Range(0, 9), (CombatManager.Skins) UnityEngine.Random.Range(0, 9), 1));
 
-    public static IEnumerator InitBattle(Skins player, Skins enemy, int potions)
+    public static IEnumerator InitBattle(SlimeData player, SlimeData enemy, int potions)
     {
         Scene current = SceneManager.GetActiveScene();
         AsyncOperation async = SceneManager.LoadSceneAsync("Combat Doyo", UnityEngine.SceneManagement.LoadSceneMode.Additive);
@@ -55,8 +56,8 @@ public class CombatManager : MonoBehaviour
         SceneManager.UnloadSceneAsync(current);
 
         var manager = FindObjectOfType<CombatManager>();
-        manager.player.Init(manager.skins[(int)player].proyectile, manager.skins[(int)player].model);
-        manager.enemy.Init(manager.skins[(int)enemy].proyectile, manager.skins[(int)enemy].model);
+        manager.player.Init(manager.fighters[(int)player.type].basicAttack, manager.fighters[(int)player.type].specialAttack, manager.fighters[(int)player.type].model);
+        manager.enemy.Init(manager.fighters[(int)enemy.type].basicAttack, manager.fighters[(int)enemy.type].specialAttack, manager.fighters[(int)enemy.type].model);
     }
 
     public void Win()
@@ -106,9 +107,10 @@ public class CombatManager : MonoBehaviour
     }
 
     [System.Serializable]
-    public struct Skin
+    public struct FighterData
     {
         public GameObject model;
-        public Proyectile proyectile;
+        public Proyectile basicAttack;
+        public Proyectile specialAttack;
     }
 }
