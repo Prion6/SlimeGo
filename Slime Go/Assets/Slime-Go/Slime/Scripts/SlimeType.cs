@@ -15,6 +15,6 @@ namespace Slime
         Metal,
         Rock,
         Spike,
-        Water,
+        Water
     }
 }
