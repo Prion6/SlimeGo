@@ -284,9 +284,10 @@ namespace Mapbox.Unity.Map
 		/// <value>The tile material.</value>
 		public Material TileMaterial
 		{
-			get
-			{
-				return _options.tileMaterial;
+            get
+            {
+                var x = _options.tileMaterial;
+                return x;
 			}
 		}
 
@@ -463,9 +464,12 @@ namespace Mapbox.Unity.Map
 		private void OnEnable()
 		{
 			tilesToProcess = new List<UnwrappedTileId>();
+
+
 			if (_options.tileMaterial == null)
 			{
-				_options.tileMaterial = new Material(Shader.Find("Standard"));
+                var xx = new Material(Shader.Find("Standard"));
+                _options.tileMaterial = xx;
 			}
 
 			if (_options.loadingTexture == null)

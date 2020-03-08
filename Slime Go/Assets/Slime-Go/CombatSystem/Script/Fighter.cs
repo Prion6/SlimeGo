@@ -1,10 +1,11 @@
-﻿using System.Collections;
+﻿using Item.Potion;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Animator))]
-public class Fighter : MonoBehaviour
+public class Fighter : MonoBehaviour , IHealable
 {
     public enum FightingActions
     {
@@ -18,7 +19,7 @@ public class Fighter : MonoBehaviour
     public int incomingDamage;
 
     public float maxLife = 100;
-    private float currentLife = 100;
+    public float currentLife = 100;
 
     public Transform model;
     public FightingActions status;
@@ -135,5 +136,10 @@ public class Fighter : MonoBehaviour
     public virtual void PerformingAction(FightingActions currentAction)
     {
 
+    }
+
+    public void Heal(double healingAmount)
+    {
+        throw new System.NotImplementedException();
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 using Slime;
 using QuestionSystem;
 using UnityEngine.UI;
+using DataSystem;
 
 namespace QuestionSystem.Slime
 {
@@ -46,6 +47,15 @@ namespace QuestionSystem.Slime
                         actualValue = lastValue;
                         Debug.Log((SlimeType)i);
                         type = (SlimeType)i;
+
+                        var data = DataManager.LoadData<Data>();
+                        if (data == null) return;
+                        var acount = data.GetAcount(Globals.playerName);
+                        if (acount == null) return;
+                         
+                        acount.player.slimes.Add(new DataSystem.Slime("Slime "+ type.ToString(),25,25,10,type.ToString()));
+                        DataManager.SaveData<Data>(data);
+
                         Slime.GetComponent<Image>().sprite = sprites[(int)type];
                     }
                 }

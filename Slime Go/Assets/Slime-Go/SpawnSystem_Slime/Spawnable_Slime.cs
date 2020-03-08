@@ -17,7 +17,8 @@ namespace SpawnSystem.Slime
             mass = Random.Range(minMass, maxMass);
             float m = (maxScale - minScale) / (maxMass - minMass);
             float scale = m * mass;
-            GameObject copy = Instantiate(gameObject, new Vector3(x, 2, z), Quaternion.identity);
+            GameObject copy = Instantiate(gameObject);
+            copy.transform.position = new Vector3(x, 2, z);
             copy.transform.localScale = new Vector3(scale, scale, scale);
             return copy;
         }

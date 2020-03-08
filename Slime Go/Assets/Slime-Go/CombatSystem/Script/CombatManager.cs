@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Slime;
+using UnityEngine.UI;
 
 public class CombatManager : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class CombatManager : MonoBehaviour
 
 
     private bool gameover;
+
+    public List<UsableButton> potions = new List<UsableButton>();
+    public UsableButton catcher;
+
 
     public List<FighterData> fighters = new List<FighterData>();
     /*
@@ -56,8 +61,77 @@ public class CombatManager : MonoBehaviour
         SceneManager.UnloadSceneAsync(current);
 
         var manager = FindObjectOfType<CombatManager>();
+
         manager.player.Init(manager.fighters[(int)player.type].basicAttack, manager.fighters[(int)player.type].specialAttack, manager.fighters[(int)player.type].model);
         manager.enemy.Init(manager.fighters[(int)enemy.type].basicAttack, manager.fighters[(int)enemy.type].specialAttack, manager.fighters[(int)enemy.type].model);
+
+        manager.InitButtons();
+    }
+
+    public void InitButtons()
+    {
+        var data = DataManager.LoadData<Data>();
+        if (data == null) return;
+        var acount = data.GetAcount(Globals.playerName);
+
+        foreach (var item in acount.player.items)
+        {
+            if (item.name.Equals("Small Potion"))
+                this.potions[0].SetAmount(item.amount);
+
+            if (item.name.Equals("Small Medium"))
+                this.potions[1].SetAmount(item.amount);
+
+            if (item.name.Equals("Small Big"))
+                this.potions[2].SetAmount(item.amount);
+
+            if (item.name.Equals("Catcher"))
+                catcher.SetAmount(item.amount);
+        }
+
+        if (this.potions[0].amount <= 0)
+            this.potions[0].button.interactable = false;
+
+        if (this.potions[1].amount <= 0)
+            this.potions[1].button.interactable = false;
+
+        if (this.potions[2].amount <= 0)
+            this.potions[2].button.interactable = false;
+
+        if (this.catcher.amount <= 0)
+            this.catcher.button.interactable = false;
+
+
+        this.potions[0].SetAmount(1);
+        this.potions[0].button.onClick.AddListener(() => {
+            player.currentLife = Mathf.Min(player.currentLife + 20, player.maxLife);
+            this.potions[0].SetAmount(this.potions[0].amount -1);
+            if (this.potions[0].amount <= 0)
+                this.potions[0].button.interactable = false;
+        });
+
+        this.potions[1].button.onClick.AddListener(() => {
+            player.currentLife = Mathf.Min(player.currentLife + 20, player.maxLife);
+            this.potions[1].SetAmount(this.potions[1].amount - 1);
+            if (this.potions[1].amount <= 0)
+                this.potions[1].button.interactable = false;
+        });
+
+        this.potions[2].button.onClick.AddListener(() => {
+            player.currentLife = Mathf.Min(player.currentLife + 20, player.maxLife);
+            this.potions[2].SetAmount(this.potions[2].amount - 1);
+            if (this.potions[2].amount <= 0)
+                this.potions[2].button.interactable = false;
+        });
+
+        this.catcher.button.onClick.AddListener(() => {
+            
+            //implementar el atrapar el slime
+
+            this.catcher.SetAmount(this.catcher.amount - 1);
+            if (this.catcher.amount <= 0)
+                this.catcher.button.interactable = false;
+        });
     }
 
     public void Win()

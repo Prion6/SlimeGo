@@ -66,13 +66,14 @@ public class LoginScreen : MonoBehaviour
         newAcount.player.items.Add(new DataSystem.Item("Small Potion",3));
         newAcount.player.items.Add(new DataSystem.Item("Medium Potion", 3));
         newAcount.player.items.Add(new DataSystem.Item("Big Potion", 3));
+        newAcount.player.items.Add(new DataSystem.Item("Catcher", 5));
 
-        newAcount.player.slimes.Add(new DataSystem.Slime("Lava",100,100,10, SlimeType.Water.ToString()));
-         
+        //newAcount.player.slimes.Add(new DataSystem.Slime("Lava",100,100,10, SlimeType.Water.ToString()));
+
         DataManager.SaveData<Data>(data);
         Globals.playerName = inputName.text;
 
-        //SceneManager.LoadScene("QuestionScreen");
-        SceneManager.LoadScene("MainScreen");
+        SceneManager.LoadScene("QuestionScreen");
+        //SceneManager.LoadScene("MainScreen");
     }
 }
