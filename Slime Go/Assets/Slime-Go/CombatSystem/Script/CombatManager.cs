@@ -31,6 +31,8 @@ public class CombatManager : MonoBehaviour
         ELECTRIC, FIRE, GEMS, ICE, LAVA, LIGHT, METAL, ROCK, SPIKES, WATER 
     }*/
 
+    public SlimeData toCatch;
+
     private void Start()
     {
         lastTime = Time.time;
@@ -50,6 +52,7 @@ public class CombatManager : MonoBehaviour
 
     public static IEnumerator InitBattle(SlimeData player, SlimeData enemy, int potions)
     {
+        
         Scene current = SceneManager.GetActiveScene();
         AsyncOperation async = SceneManager.LoadSceneAsync("Combat Doyo", UnityEngine.SceneManagement.LoadSceneMode.Additive);
         async.allowSceneActivation = true;
@@ -61,7 +64,7 @@ public class CombatManager : MonoBehaviour
         SceneManager.UnloadSceneAsync(current);
 
         var manager = FindObjectOfType<CombatManager>();
-
+        manager.toCatch = enemy;
         manager.player.Init(manager.fighters[(int)player.type].basicAttack, manager.fighters[(int)player.type].specialAttack, manager.fighters[(int)player.type].model);
         manager.enemy.Init(manager.fighters[(int)enemy.type].basicAttack, manager.fighters[(int)enemy.type].specialAttack, manager.fighters[(int)enemy.type].model);
 
@@ -125,8 +128,49 @@ public class CombatManager : MonoBehaviour
         });
 
         this.catcher.button.onClick.AddListener(() => {
-            
-            //implementar el atrapar el slime
+        var r = Random.Range(0, 100);
+        if (this.enemy.currentLife / this.enemy.maxLife <= 0.1f)
+        {
+            if (r < 90)
+                Globals.mesageCatcher = "Capturaste al slime.";
+            else
+                Globals.mesageCatcher = "El slime se ha escapado.";
+        }
+        else if (this.enemy.currentLife / this.enemy.maxLife <= 0.3f)
+        {
+            if (r < 33)
+                Globals.mesageCatcher = "Capturaste al slime.";
+            else
+                Globals.mesageCatcher = "El slime se ha escapado.";
+        }
+        else if (this.enemy.currentLife / this.enemy.maxLife <= 0.5f)
+        {
+            if (r < 10)
+                Globals.mesageCatcher = "Capturaste al slime.";
+            else
+                Globals.mesageCatcher = "El slime se ha escapado.";
+        }
+        else
+        {
+            Globals.mesageCatcher = "";
+        }
+
+        if (Globals.mesageCatcher.Equals("Capturaste al slime."))
+        {
+            try
+            {
+                var d = DataManager.LoadData<Data>();
+                var a = d.GetAcount(Globals.playerName);
+                a.player.slimes.Add(new DataSystem.Slime("Slime " + toCatch.type.ToString(), toCatch.maxLive, toCatch.maxLive, toCatch.mass, toCatch.type.ToString()));
+                DataManager.SaveData<Data>(d);
+                }
+                catch
+                {
+
+                }
+            }
+
+            SceneManager.LoadScene("MainScreen");
 
             this.catcher.SetAmount(this.catcher.amount - 1);
             if (this.catcher.amount <= 0)

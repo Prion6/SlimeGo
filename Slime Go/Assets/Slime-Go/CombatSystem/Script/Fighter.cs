@@ -1,4 +1,5 @@
 ﻿using Item.Potion;
+using Slime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +21,8 @@ public class Fighter : MonoBehaviour , IHealable
 
     public float maxLife = 100;
     public float currentLife = 100;
+    public SlimeType type;    // --------------------------------------------
+    public float weigth;
 
     public Transform model;
     public FightingActions status;

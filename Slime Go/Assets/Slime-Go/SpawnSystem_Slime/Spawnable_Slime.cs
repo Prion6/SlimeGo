@@ -36,7 +36,7 @@ namespace SpawnSystem.Slime
                 DataSystem.Slime s = acount.player.GetBestSlime();
                 SlimeData player = new SlimeData(s.mainType, s.life, s.maxLife, s.weight);
                 SlimeData enemy = new SlimeData(type.ToString(), maxLife, maxLife, mass);
-                StartCoroutine(CombatManager.InitBattle(player, enemy));
+                StartCoroutine(CombatManager.InitBattle(player, enemy,0));
             }
             catch (System.Exception e)
             {
